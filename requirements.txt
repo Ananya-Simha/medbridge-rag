@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+streamlit
+requests
+pydantic
+pandas
+pyarrow
+faiss-cpu
+sentence-transformers
+transformers
+torch
+textstat
+nltk
