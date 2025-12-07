@@ -24,21 +24,20 @@ class RAGPipeline:
             blocks.append(f"[{i}] {p['answer_chunk']}\n(Source: {p['url']})")
         context = "\n\n".join(blocks)
 
-	prompt = (
-    		"You are a medical assistant. You are given a patient question and evidence.\n\n"
-    		f"Question: {question}\n\n"
-    		"Evidence:\n"
-    		f"{context}\n\n"
-    		"Write a clear, patient-friendly answer in simple English.\n"
-    		"- Use short sentences (usually 10–15 words).\n"
-		"- Write 3–5 short sentences in simple English.\n"
-    		"- Avoid medical jargon when possible; if you must use a term, briefly explain it.\n"
-    		"- Aim for a reading level around 8th grade or lower.\n"
-    		"- Do NOT include unnecessary details.\n"
-    		"- Only use facts from the evidence above.\n"
-    		"- Cite sources inline like [1], [2] that match the evidence numbers.\n\n"
-    		"Answer:\n"
-	)
+        prompt = (
+            "You are a medical assistant. You are given a patient question and evidence.\n\n"
+            f"Question: {question}\n\n"
+            "Evidence:\n"
+            f"{context}\n\n"
+            "Write a clear, patient-friendly answer in simple English.\n"
+            "- Use short sentences (usually 10–15 words).\n"
+            "- Avoid medical jargon when possible; if you must use a term, briefly explain it.\n"
+            "- Aim for a reading level around 8th grade or lower.\n"
+            "- Do NOT include unnecessary details.\n"
+            "- Only use facts from the evidence above.\n"
+            "- Cite sources inline like [1], [2] that match the evidence numbers.\n\n"
+            "Answer:\n"
+        )
         return prompt
 
     def generate(self, question: str) -> Dict:
