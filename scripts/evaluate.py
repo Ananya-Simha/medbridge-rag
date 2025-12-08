@@ -5,19 +5,15 @@ import pandas as pd
 import requests
 import textstat
 
-API_URL = "http://34.26.106.102:8000/answer"  # replace with your VM IP
+API_URL = "http://34.130.153.113:8000/answer"  # replace with your VM IP
 
 RAW_CSV = Path("data/raw/medquad_raw.csv")
 OUT_CSV = Path("data/eval_with_baselines.csv")
 
 TEST_QUESTIONS = [
-    "What causes Glaucoma ?",
-    "How to prevent High Blood Pressure ?",
+    "What are the symptoms of Vitreoretinochoroidopathy dominant ?",
+    "What is (are) Thanatophoric dysplasia ?",
     "What are the symptoms of High Blood Pressure ?",
-    "What are the symptoms of Urinary Tract Infections ?",
-    "What are the treatments for Alcohol Use and Older Adults ?",
-    "What causes Osteoarthritis ?",
-    "How many people are affected by Osteoarthritis ?",
     "What are the treatments for Prostate Cancer ?",
     "What are the symptoms of Poikiloderma with neutropenia ?",
     "Is ornithine translocase deficiency inherited ?"
