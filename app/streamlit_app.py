@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://172.27.16.1:8000/answer" 
+API_URL = "http://34.73.47.149:8000/answer" 
 
 st.set_page_config(page_title="MedBridge", layout="wide")
 st.title("MedBridge: Patient-Friendly Medical Answers")
