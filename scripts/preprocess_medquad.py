@@ -36,8 +36,8 @@ def main():
     for i, row in df.iterrows():
         q = str(row.get("question", ""))
         a = str(row.get("answer", ""))
-        url = str(row.get("source", ""))
-        topic = str(row.get("focus_area", ""))
+        url = str(row.get("url", ""))
+        topic = str(row.get("source", ""))
         if not a.strip():
             continue
         chunks = chunk_text(a)
