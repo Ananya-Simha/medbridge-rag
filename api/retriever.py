@@ -30,7 +30,7 @@ class Retriever:
                 "answer_chunk": row["answer_chunk"],
                 "question": row["question"],
                 "url": row["url"],
-                "topic": row["source"],
+                "topic": row["topic"],
                 "score": float(s)
             })
         return results
